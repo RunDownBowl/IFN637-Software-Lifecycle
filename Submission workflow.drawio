@@ -1,0 +1,131 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Submission Workflow Activity Diagram" id="aPMCBtbNJ8tCuiPtqTZV">
+    <mxGraphModel dx="1701" dy="2187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-1" parent="1" style="shape=folder;fontStyle=1;tabWidth=450;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;fontColor=#0f172a;" value="&lt;b&gt;act [Activity] Student Homework Submission &amp;amp; Client Validation Workflow&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1070" width="1310" x="150" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-2" parent="q2rEcxW01ROXAX-5R_M1-1" style="swimlane;html=1;startSize=30;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#0f172a;fontSize=12;rounded=0;" value="&lt;b&gt;Student (Browser Client UI)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="986.0784313725491" width="564.3076923076923" x="40.30769230769231" y="52.450980392156865" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-3" parent="q2rEcxW01ROXAX-5R_M1-2" style="ellipse;fillColor=#0f172a;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="31.47058823529412" width="30.23076923076923" x="267.03846153846155" y="52.450980392156865" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-4" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Select &#39;Student&#39; Role on Landing Page" vertex="1">
+          <mxGeometry height="52.450980392156865" width="171.3076923076923" x="196.5" y="115.3921568627451" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-5" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Select Assessment from Assignment List&#xa;(e.g., IFN636 Assessment 1)" vertex="1">
+          <mxGeometry height="52.450980392156865" width="201.53846153846155" x="181.3846153846154" y="199.31372549019608" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-6" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Select Local File via File Chooser / Drag-and-Drop" vertex="1">
+          <mxGeometry height="52.450980392156865" width="201.53846153846155" x="181.3846153846154" y="283.2352941176471" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-7" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=1.5;fontSize=11;fontColor=#991b1b;" value="Display Error Banner:&#xa;&#39;Invalid format. Only .pdf files allowed&#39;" vertex="1">
+          <mxGeometry height="52.450980392156865" width="211.6153846153846" x="30.23076923076923" y="382.89215686274514" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-8" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=1.5;fontSize=11;fontColor=#991b1b;" value="Display Error Banner:&#xa;&#39;File size exceeds 10 MB limit&#39;" vertex="1">
+          <mxGeometry height="52.450980392156865" width="211.6153846153846" x="30.23076923076923" y="498.2843137254902" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-9" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=1.5;fontSize=11;fontColor=#14532d;" value="Enable &#39;Submit Assignment&#39; Button &amp;amp;&#xa;Display Valid File Chip (.pdf &amp;lt;= 10MB)" vertex="1">
+          <mxGeometry height="52.450980392156865" width="211.6153846153846" x="176.34615384615384" y="608.4313725490197" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-10" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Click &#39;Submit Assignment&#39;" vertex="1">
+          <mxGeometry height="47.20588235294118" width="171.3076923076923" x="196.5" y="692.3529411764706" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-11" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=1.5;fontSize=11;fontColor=#14532d;" value="Display Green Confirmation Modal&#xa;and Update Badge to &#39;Submitted&#39;" vertex="1">
+          <mxGeometry height="52.450980392156865" width="211.6153846153846" x="176.34615384615384" y="786.7647058823529" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-12" parent="q2rEcxW01ROXAX-5R_M1-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Disable file input &amp;amp; Submit button&#xa;to prevent duplicate submissions" vertex="1">
+          <mxGeometry height="52.450980392156865" width="211.6153846153846" x="176.34615384615384" y="870.686274509804" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-13" parent="q2rEcxW01ROXAX-5R_M1-2" style="ellipse;html=1;shape=endState;fillColor=#0f172a;strokeColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="31.47058823529412" width="30.23076923076923" x="267.03846153846155" y="949.3627450980392" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-19" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-20" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-21" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-28" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#94a3b8;strokeWidth=1;dashed=1;" target="q2rEcxW01ROXAX-5R_M1-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="136.03846153846155" y="293.72549019607845" />
+              <mxPoint x="282.15384615384613" y="293.72549019607845" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-29" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#94a3b8;strokeWidth=1;dashed=1;" target="q2rEcxW01ROXAX-5R_M1-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="136.03846153846155" y="409.11764705882354" />
+              <mxPoint x="110.84615384615384" y="409.11764705882354" />
+              <mxPoint x="110.84615384615384" y="257.0098039215686" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-30" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-33" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-34" edge="1" parent="q2rEcxW01ROXAX-5R_M1-2" source="q2rEcxW01ROXAX-5R_M1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-14" parent="q2rEcxW01ROXAX-5R_M1-1" style="swimlane;html=1;startSize=30;fillColor=#e2e8f0;strokeColor=#64748b;fontColor=#0f172a;fontSize=12;rounded=0;" value="&lt;b&gt;Client JavaScript Logic &amp;amp; State Simulation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="986.0784313725491" width="655" x="604.6153846153846" y="52.450980392156865" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-15" parent="q2rEcxW01ROXAX-5R_M1-14" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Intercept change event &amp;amp;&#xa;Read File.name &amp;amp; File.size metadata" vertex="1">
+          <mxGeometry height="52.450980392156865" width="231.76923076923077" x="211.6153846153846" y="283.2352941176471" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-16" parent="q2rEcxW01ROXAX-5R_M1-14" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef08a;strokeColor=#ca8a04;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="62.94117647058824" width="60.46153846153846" x="297.2692307692308" y="377.64705882352945" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-17" parent="q2rEcxW01ROXAX-5R_M1-14" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef08a;strokeColor=#ca8a04;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="62.94117647058824" width="60.46153846153846" x="297.2692307692308" y="493.03921568627453" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-18" parent="q2rEcxW01ROXAX-5R_M1-14" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="Simulate submission processing&#xa;(Show spinner &amp;lt; 200ms)" vertex="1">
+          <mxGeometry height="47.20588235294118" width="201.53846153846155" x="226.73076923076923" y="692.3529411764706" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-23" edge="1" parent="q2rEcxW01ROXAX-5R_M1-14" source="q2rEcxW01ROXAX-5R_M1-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-25" edge="1" parent="q2rEcxW01ROXAX-5R_M1-14" source="q2rEcxW01ROXAX-5R_M1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#16a34a;strokeWidth=1.2;fontColor=#14532d;fontSize=10;" target="q2rEcxW01ROXAX-5R_M1-17" value="[File == .pdf]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-22" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-24" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#dc2626;strokeWidth=1.2;fontColor=#991b1b;fontSize=10;" target="q2rEcxW01ROXAX-5R_M1-7" value="[File != .pdf]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-26" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#dc2626;strokeWidth=1.2;fontColor=#991b1b;fontSize=10;" target="q2rEcxW01ROXAX-5R_M1-8" value="[Size &gt; 10 MB]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-27" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#16a34a;strokeWidth=1.2;fontColor=#14532d;fontSize=10;" target="q2rEcxW01ROXAX-5R_M1-9" value="[Size &lt;= 10 MB]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932.1153846153846" y="634.6568627450981" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-31" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2rEcxW01ROXAX-5R_M1-32" edge="1" parent="q2rEcxW01ROXAX-5R_M1-1" source="q2rEcxW01ROXAX-5R_M1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=1.2;" target="q2rEcxW01ROXAX-5R_M1-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932.1153846153846" y="812.9901960784314" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

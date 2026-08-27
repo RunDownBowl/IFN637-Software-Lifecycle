@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Submission Workflow Activity Diagram" id="aPMCBtbNJ8tCuiPtqTZV">
+    <mxGraphModel dx="1871" dy="935" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gqZWW7SIvgXve7LvChLI-16" parent="1" style="shape=folder;fontStyle=1;tabWidth=500;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;fontColor=#0f172a;" value="&lt;b&gt;bdd [Package] Architecture &amp;amp; Component Structure [SysML Block Definition Diagram]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="920" width="1300" x="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-17" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;overflow=fill;rounded=0;fillColor=#f1f5f9;strokeColor=#334155;strokeWidth=2;fontSize=11;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«block»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;SubmissionPortalApp&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;values:&lt;/b&gt;&lt;br/&gt;+ appVersion: String = &quot;1.0.0&quot;&lt;br/&gt;+ clientRuntime: String = &quot;Browser JS (ES6+)&quot;&lt;br/&gt;+ hostingTarget: String = &quot;AWS EC2 (Nginx/Static)&quot;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="340" x="480" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-18" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;overflow=fill;rounded=0;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«block»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;PresentationLayer (UI Views)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;operations:&lt;/b&gt;&lt;br/&gt;+ renderLandingView(): void&lt;br/&gt;+ renderStudentDashboard(): void&lt;br/&gt;+ renderLecturerOverview(): void&lt;br/&gt;+ renderEmptyState(): void&lt;br/&gt;+ updateStatusBadge(status: String): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="130" width="300" x="120" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-19" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;overflow=fill;rounded=0;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.5;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«block»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FileValidationEngine&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;values:&lt;/b&gt;&lt;br/&gt;+ maxSizeBytes: Number = 10485760 (10MB)&lt;br/&gt;+ allowedExtension: String = &quot;.pdf&quot;&lt;br/&gt;&lt;b&gt;operations:&lt;/b&gt;&lt;br/&gt;+ validateExtension(fileName: String): Boolean&lt;br/&gt;+ validateFileSize(sizeBytes: Number): Boolean&lt;br/&gt;+ getValidationError(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="300" x="500" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-20" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;overflow=fill;rounded=0;fillColor=#ecfdf5;strokeColor=#059669;strokeWidth=1.5;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«block»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;ClientState &amp;amp; MockDataStore&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;values:&lt;/b&gt;&lt;br/&gt;+ currentRole: RoleEnum [STUDENT, LECTURER]&lt;br/&gt;+ submissionStatus: String = &quot;Pending&quot;&lt;br/&gt;+ mockAssignments: Array&amp;lt;Assignment&amp;gt;&lt;br/&gt;+ mockLecturerRegister: Array&amp;lt;Record&amp;gt;&lt;br/&gt;&lt;b&gt;operations:&lt;/b&gt;&lt;br/&gt;+ setRole(role: String): void&lt;br/&gt;+ simulateSubmission(meta: Object): Promise&lt;/p&gt;" vertex="1">
+          <mxGeometry height="160" width="320" x="880" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-21" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamond;startFill=1;endArrow=none;strokeColor=#334155;strokeWidth=1.5;" target="gqZWW7SIvgXve7LvChLI-18" value="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="210" />
+              <mxPoint x="270" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-22" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamond;startFill=1;endArrow=none;strokeColor=#334155;strokeWidth=1.5;" target="gqZWW7SIvgXve7LvChLI-19" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-23" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamond;startFill=1;endArrow=none;strokeColor=#334155;strokeWidth=1.5;" target="gqZWW7SIvgXve7LvChLI-20" value="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="210" />
+              <mxPoint x="1040" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-24" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;fontSize=10;fontColor=#0f172a;" value="&lt;b&gt;«block»&lt;br/&gt;StudentSubmissionView&lt;/b&gt;&lt;hr size=&#39;1&#39;/&gt;+ dropZoneElement&lt;br/&gt;+ errorBannerElement&lt;br/&gt;+ successModalElement" vertex="1">
+          <mxGeometry height="90" width="180" x="80" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-25" parent="gqZWW7SIvgXve7LvChLI-16" style="html=1;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;fontSize=10;fontColor=#0f172a;" value="&lt;b&gt;«block»&lt;br/&gt;LecturerReviewView&lt;/b&gt;&lt;hr size=&#39;1&#39;/&gt;+ filterDropdownElement&lt;br/&gt;+ submissionTableElement&lt;br/&gt;+ emptyStateCardElement" vertex="1">
+          <mxGeometry height="90" width="180" x="280" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-26" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=0;strokeColor=#0284c7;strokeWidth=1.2;" target="gqZWW7SIvgXve7LvChLI-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-27" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=0;strokeColor=#0284c7;strokeWidth=1.2;" target="gqZWW7SIvgXve7LvChLI-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-28" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;strokeColor=#475569;strokeWidth=1.2;fontColor=#475569;" target="gqZWW7SIvgXve7LvChLI-19" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="650" />
+              <mxPoint x="650" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-29" edge="1" parent="gqZWW7SIvgXve7LvChLI-16" source="gqZWW7SIvgXve7LvChLI-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;strokeColor=#475569;strokeWidth=1.2;fontColor=#475569;" target="gqZWW7SIvgXve7LvChLI-20" value="«bind»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="680" />
+              <mxPoint x="1040" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gqZWW7SIvgXve7LvChLI-30" parent="gqZWW7SIvgXve7LvChLI-16" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacing=6;fillColor=#fffbeb;strokeColor=#f59e0b;fontSize=10;fontColor=#92400e;" value="&lt;b&gt;Scope Note (Zero-Database Constraint):&lt;/b&gt;&lt;br/&gt;All data structures are transient mock objects executed inside browser memory. Deployed to AWS EC2 as static assets." vertex="1">
+          <mxGeometry height="70" width="380" x="780" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

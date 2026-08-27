@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="SysML Requirements Diagram" id="4FwDr3uYmC0LjeTw1fwV">
+    <mxGraphModel dx="1701" dy="1087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RMbuGiTDs9L3361EJAF3-1" parent="1" style="shape=folder;fontStyle=1;tabWidth=380;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;fontColor=#0f172a;" value="&lt;b&gt;req [Package] Submission Portal Requirements Model [SysML Requirements Diagram]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1060" width="1560" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-2" parent="RMbuGiTDs9L3361EJAF3-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e2e8f0;strokeColor=#1e293b;strokeWidth=1.5;fontStyle=1;fontSize=12;fontColor=#0f172a;" value="«Actor»&#xa;Student" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-3" parent="RMbuGiTDs9L3361EJAF3-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e2e8f0;strokeColor=#1e293b;strokeWidth=1.5;fontStyle=1;fontSize=12;fontColor=#0f172a;" value="«Actor»&#xa;Lecturer" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-4" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#f1f5f9;strokeColor=#334155;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;SYS-REQ: Submission Portal Demonstration System&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; SYS-01&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The application shall provide a static frontend prototype enabling role selection, assignment details inspection, client-side validation, simulated submission, and lecturer review with empty states without persistent storage.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="1120" x="210" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-5" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#e0f2fe;strokeColor=#0369a1;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Functional Requirements Group&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-00&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; System behavioural capabilities.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="75" width="260" x="280" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-6" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.5;fontSize=11;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Non-Functional Requirements Group&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-00&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; System quality attributes.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="75" width="260" x="1000" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-7" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#334155;strokeWidth=1.5;" target="RMbuGiTDs9L3361EJAF3-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="190" />
+              <mxPoint x="410" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-8" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#334155;strokeWidth=1.5;" target="RMbuGiTDs9L3361EJAF3-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="190" />
+              <mxPoint x="1130" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-9" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-01: Role Selection&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-01&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall provide distinct pathways for Student and Lecturer roles without authentication.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="460" x="220" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-10" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-11" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-02: Assignment Listing&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-02&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall display mock assignments with titles, due dates, weighting, and submission status.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="470" x="220" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-12" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-13" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-03: Assignment Details&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-03&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall show full instructions, rubrics, allowed file formats, and submission guidelines.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="460" x="220" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-14" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-15" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-04: Client-Side Validation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-04&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall validate in-browser that selected files have .pdf extension and size &amp;lt;= 10 MB.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="450" x="220" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-16" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-17" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-05: Simulated Submission&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-05&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall simulate upload, provide feedback within 200ms, and update badge to &#39;Submitted&#39;.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="500" x="220" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-18" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-19" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;FR-06: Lecturer Review &amp;amp; Empty State&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; FR-06&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; The system shall render assignment overview tables and an explicit empty state card when submissions = 0.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="520" x="220" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-20" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#0369a1;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-21" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;NFR-01: Usability&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-01&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; Follow consistent visual hierarchy, readable typography, and explicit status badges across all states.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="470" x="1010" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-22" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#d97706;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-23" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;NFR-02: Performance&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-02&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; Instant UI validation response within 200ms on file selection without network latency.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="420" x="1010" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-24" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#d97706;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-25" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;NFR-03: Reliability&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-03&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; Consistent deterministic error message handling for boundary cases (e.g. 10.01 MB or .docx file).&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="470" x="1010" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-26" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#d97706;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-27" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;NFR-04: Portability&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-04&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; Operate seamlessly on modern standards-compliant web browsers (Chrome, Edge, Firefox, Safari).&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="480" x="1010" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-28" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#d97706;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-29" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«requirement»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;NFR-05: Security Hygiene&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;id:&lt;/b&gt; NFR-05&lt;br/&gt;&lt;b&gt;text:&lt;/b&gt; Zero hardcoded credentials, clear limitation disclaimer, and sandboxed client execution.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="85" width="420" x="1010" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-30" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=circlePlus;startFill=0;endArrow=none;strokeColor=#d97706;strokeWidth=1.2;" target="RMbuGiTDs9L3361EJAF3-29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-31" parent="RMbuGiTDs9L3361EJAF3-1" style="html=1;overflow=fill;rounded=0;fillColor=#ecfdf5;strokeColor=#059669;strokeWidth=1.2;fontSize=10;fontColor=#0f172a;" value="&lt;p style=&#39;margin:0px;padding:2px;&#39;&gt;&lt;b&gt;«testCase»&lt;/b&gt;&lt;br/&gt;&lt;b&gt;TC-01: File Format &amp;amp; Size Guard&lt;/b&gt;&lt;/p&gt;&lt;hr size=&#39;1&#39;/&gt;&lt;p style=&#39;margin:0px;padding:2px;text-align:left;&#39;&gt;&lt;b&gt;type:&lt;/b&gt; Browser Validation Test&lt;br/&gt;&lt;b&gt;eval:&lt;/b&gt; Verify rejection of non-PDF and &amp;gt;10MB files&lt;/p&gt;" vertex="1">
+          <mxGeometry height="75" width="240" x="760" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-32" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-31" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeColor=#059669;strokeWidth=1.5;fontStyle=1;fontColor=#059669;" target="RMbuGiTDs9L3361EJAF3-15" value="«verify»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-33" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeColor=#475569;strokeWidth=1.2;fontStyle=1;fontColor=#475569;" target="RMbuGiTDs9L3361EJAF3-9" value="«traces»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RMbuGiTDs9L3361EJAF3-34" edge="1" parent="RMbuGiTDs9L3361EJAF3-1" source="RMbuGiTDs9L3361EJAF3-3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeColor=#475569;strokeWidth=1.2;fontStyle=1;fontColor=#475569;" target="RMbuGiTDs9L3361EJAF3-19" value="«traces»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

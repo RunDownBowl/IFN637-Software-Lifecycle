@@ -10,7 +10,7 @@ function StudentPortal() {
 
   const handleFileValidation = (selectedFile) => {
     if (!selectedFile) {
-      setError('No file selected. Please choose a PDF file under 10 MB (10 * 1024 * 1024 bytes).');
+      setError('No file selected. Please choose a PDF file under 10 MB.');
       setFile(null);
       setSubmissionStatus('pending');
       return false;
@@ -31,7 +31,7 @@ function StudentPortal() {
       }
 
       if (!isUnderLimit) {
-        issues.push('File must be under 10 MB (10 * 1024 * 1024 bytes).');
+        issues.push('File must be under 10 MB.');
       }
 
       setError(`Selected file "${fileName}" is invalid. ${issues.join(' ')}`);

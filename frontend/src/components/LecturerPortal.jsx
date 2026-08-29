@@ -39,10 +39,10 @@ function LecturerPortal() {
     });
   }, [activeSubmissions, searchTerm, selectedFilter]);
 
-  const isEmptyState = false;
-  const metricSubmissionTotal = 36;
-  const pendingCount = 12;
-  const totalRecords = 36;
+  const isEmptyState = !currentAssessment.windowOpen;
+  const metricSubmissionTotal = isEmptyState ? 0 : 36;
+  const pendingCount = isEmptyState ? enrolledCount : 12;
+  const totalRecords = isEmptyState ? 0 : 36;
 
   const downloadCsv = () => {
     if (!filteredRows.length) {
@@ -105,18 +105,20 @@ function LecturerPortal() {
             ))}
           </select>
 
-          <div className="search-input-wrap lecturer-search">
-            <span className="search-input-wrap__icon" aria-hidden="true">
-              ⌕
-            </span>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-              placeholder="Search student..."
-              aria-label="Search student submissions"
-            />
-          </div>
+          {!isEmptyState && (
+            <div className="search-input-wrap lecturer-search">
+              <span className="search-input-wrap__icon" aria-hidden="true">
+                ⌕
+              </span>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Search student..."
+                aria-label="Search student submissions"
+              />
+            </div>
+          )}
 
           <button type="button" className="export-button" onClick={downloadCsv}>
             <span className="export-button__icon" aria-hidden="true">
@@ -172,101 +174,130 @@ function LecturerPortal() {
         </div>
       </div>
 
-      <section className="table-panel">
-        <div className="table-panel__head">
-          <h2>Student Submissions</h2>
-        </div>
-
-        <div className="table-shell">
-          <div className="filter-tabs" role="tablist" aria-label="Submission filters">
-            {filterLabels.map((filterKey) => {
-              const label =
-                filterKey === 'all' ? 'All' : filterKey === 'submitted' ? 'Submitted' : 'Pending';
-
-              return (
-                <button
-                  key={filterKey}
-                  type="button"
-                  className={`filter-tab ${selectedFilter === filterKey ? 'is-active' : ''}`}
-                  onClick={() => setSelectedFilter(filterKey)}
-                  aria-pressed={selectedFilter === filterKey}
-                >
-                  {label}
-                </button>
-              );
-            })}
+      {!isEmptyState ? (
+        <section className="table-panel">
+          <div className="table-panel__head">
+            <h2>Student Submissions</h2>
           </div>
 
-          <table className="submission-table">
-            <thead>
-              <tr>
-                <th>Student ID</th>
-                <th>Student Name</th>
-                <th>Submitted File</th>
-                <th>File Size</th>
-                <th>Submission Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredRows.length ? (
-                filteredRows.map((submission) => (
-                  <tr key={submission.id}>
-                    <td>
-                      <button type="button" className="student-id-link">
-                        {submission.studentId}
-                      </button>
-                    </td>
-                    <td>{submission.studentName}</td>
-                    <td>
-                      <span className="submission-file">
-                        <span className="submission-file__icon" aria-hidden="true">
-                          📄
+          <div className="table-shell">
+            <div className="filter-tabs" role="tablist" aria-label="Submission filters">
+              {filterLabels.map((filterKey) => {
+                const label =
+                  filterKey === 'all' ? 'All' : filterKey === 'submitted' ? 'Submitted' : 'Pending';
+
+                return (
+                  <button
+                    key={filterKey}
+                    type="button"
+                    className={`filter-tab ${selectedFilter === filterKey ? 'is-active' : ''}`}
+                    onClick={() => setSelectedFilter(filterKey)}
+                    aria-pressed={selectedFilter === filterKey}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+
+            <table className="submission-table">
+              <thead>
+                <tr>
+                  <th>Student ID</th>
+                  <th>Student Name</th>
+                  <th>Submitted File</th>
+                  <th>File Size</th>
+                  <th>Submission Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredRows.length ? (
+                  filteredRows.map((submission) => (
+                    <tr key={submission.id}>
+                      <td>
+                        <button type="button" className="student-id-link">
+                          {submission.studentId}
+                        </button>
+                      </td>
+                      <td>{submission.studentName}</td>
+                      <td>
+                        <span className="submission-file">
+                          <span className="submission-file__icon" aria-hidden="true">
+                            📄
+                          </span>
+                          {submission.fileName}
                         </span>
-                        {submission.fileName}
-                      </span>
-                    </td>
-                    <td>{submission.fileSize}</td>
-                    <td>{submission.submissionDate}</td>
-                    <td>
-                      <span className="table-status">Submitted</span>
+                      </td>
+                      <td>{submission.fileSize}</td>
+                      <td>{submission.submissionDate}</td>
+                      <td>
+                        <span className="table-status">Submitted</span>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6" className="submission-table__empty">
+                      No matching submissions found.
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="6" className="submission-table__empty">
-                    No matching submissions found.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
 
-          <div className="table-foot">
-            <span>
-              Page 1 of 8 · {totalRecords} total records
-            </span>
-            <div className="pagination" aria-label="Pagination">
-              <button type="button" className="pagination__button" aria-label="Previous page">
-                Prev
+            <div className="table-foot">
+              <span>
+                Page 1 of 8 · {totalRecords} total records
+              </span>
+              <div className="pagination" aria-label="Pagination">
+                <button type="button" className="pagination__button" aria-label="Previous page">
+                  Prev
+                </button>
+                <button type="button" className="pagination__button is-current" aria-current="page">
+                  1
+                </button>
+                <button type="button" className="pagination__button">
+                  2
+                </button>
+                <button type="button" className="pagination__button">
+                  3
+                </button>
+                <button type="button" className="pagination__button" aria-label="Next page">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="empty-panel">
+          <div className="empty-panel__card">
+            <div className="empty-panel__icon" aria-hidden="true">
+              <div className="empty-panel__icon-inner">
+                <span className="inbox-icon">
+                  ▣
+                </span>
+              </div>
+            </div>
+
+            <h2>No Submissions Received Yet</h2>
+            <p>
+              No student files have been submitted for this assessment container. Submissions will
+              appear here once received.
+            </p>
+
+            <div className="empty-panel__actions">
+              <button type="button" className="panel-button panel-button--outline">
+                Configure Assessment
               </button>
-              <button type="button" className="pagination__button is-current" aria-current="page">
-                1
-              </button>
-              <button type="button" className="pagination__button">
-                2
-              </button>
-              <button type="button" className="pagination__button">
-                3
-              </button>
-              <button type="button" className="pagination__button" aria-label="Next page">
-                Next
+              <button type="button" className="panel-button panel-button--dark">
+                Notify Students
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   );
 }

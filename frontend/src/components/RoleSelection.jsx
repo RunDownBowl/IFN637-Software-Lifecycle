@@ -39,7 +39,6 @@ function RoleSelection({ onSelectRole }) {
               <div className="role-card__icon role-card__icon--student" aria-hidden="true">
                 <svg viewBox="0 0 64 64" focusable="false">
                   <path d="M14 26.5 32 17l18 9.5-18 9.5L14 26.5Zm18 12.1v10.9M21 31.5v9.6c0 2.1 5.1 4 11 4s11-1.9 11-4v-9.6" />
-                  <path d="M12 26.5v13.6c0 1.5 6.5 5.9 20 5.9s20-4.4 20-5.9V26.5" />
                 </svg>
               </div>
 
@@ -67,7 +66,6 @@ function RoleSelection({ onSelectRole }) {
                 <svg viewBox="0 0 64 64" focusable="false">
                   <rect x="12" y="14" width="40" height="30" rx="4" />
                   <path d="M20 46h24v6H20zm8-26h8m-8 8h12m-12 8h8" />
-                  <path d="M32 46v-6" />
                 </svg>
               </div>
 

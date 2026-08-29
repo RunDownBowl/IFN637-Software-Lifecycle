@@ -12,18 +12,16 @@ function App() {
 
   return (
     <div className="app-shell">
-      <div className="device-frame">
-        <Navbar role={role} onToggleRole={handleRoleToggle} />
-        <div className="content-area">
-          {role === 'student' ? <StudentPortal /> : <LecturerPortal />}
-        </div>
-
-        <footer className="portal-footer" aria-label="Current portal footer">
-          <span className="portal-footer__item">
-            {role === 'student' ? 'Student Portal' : 'Learning & Teaching'}
-          </span>
-        </footer>
+      <Navbar role={role} onToggleRole={handleRoleToggle} />
+      <div className="content-area">
+        {role === 'student' ? <StudentPortal /> : <LecturerPortal />}
       </div>
+
+      <footer className="portal-footer" aria-label="Current portal footer">
+        <span className="portal-footer__item">
+          {role === 'student' ? 'Student Portal' : 'Learning & Teaching'}
+        </span>
+      </footer>
     </div>
   );
 }

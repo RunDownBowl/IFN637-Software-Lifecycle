@@ -43,6 +43,10 @@ function LecturerPortal() {
   const metricSubmissionTotal = isEmptyState ? 0 : 36;
   const pendingCount = isEmptyState ? enrolledCount : 12;
   const totalRecords = isEmptyState ? 0 : 36;
+  const lastUpdated = new Date().toLocaleString('en-AU', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  });
 
   const downloadCsv = () => {
     if (!filteredRows.length) {
@@ -134,7 +138,7 @@ function LecturerPortal() {
           {isEmptyState ? (
             'Assessment window has not yet opened.'
           ) : (
-            `Showing ${filteredRows.length} of ${totalRecords} submissions · Last updated today at 14:32`
+            `Showing ${filteredRows.length} of ${totalRecords} submissions · Last updated ${lastUpdated}`
           )}
         </div>
 

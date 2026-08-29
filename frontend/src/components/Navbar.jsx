@@ -1,4 +1,4 @@
-function Navbar({ role, onToggleRole }) {
+function Navbar({ role, onChangeRole }) {
   const isStudent = role === 'student';
 
   return (
@@ -19,8 +19,8 @@ function Navbar({ role, onToggleRole }) {
           <span>Assessment 1</span>
         </div>
 
-        <button className="navbar__toggle" type="button" onClick={onToggleRole}>
-          {isStudent ? 'Switch to Lecturer' : 'Switch to Student'}
+        <button className="navbar__toggle" type="button" onClick={onChangeRole}>
+          Change Role
         </button>
       </div>
     </header>

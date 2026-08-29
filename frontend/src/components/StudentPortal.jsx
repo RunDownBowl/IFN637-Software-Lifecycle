@@ -1,0 +1,184 @@
+import { useState } from 'react';
+import { assignment } from '../mockData';
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
+
+function StudentPortal() {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState('');
+  const [submissionStatus, setSubmissionStatus] = useState('pending');
+
+  const handleFileValidation = (selectedFile) => {
+    if (!selectedFile) {
+      return;
+    }
+
+    const fileName = selectedFile.name || 'Selected file';
+    const isPdf = fileName.toLowerCase().endsWith('.pdf');
+    const isUnderLimit = selectedFile.size <= MAX_FILE_SIZE;
+
+    if (!isPdf || !isUnderLimit) {
+      const issues = [];
+
+      if (!isPdf) {
+        issues.push('Only .pdf files are accepted.');
+      }
+
+      if (!isUnderLimit) {
+        issues.push('File must be under 10 MB.');
+      }
+
+      setError(`Selected file "${fileName}" is invalid. ${issues.join(' ')}`);
+      setFile(null);
+      setSubmissionStatus('pending');
+      return false;
+    }
+
+    setError('');
+    setFile(selectedFile);
+    setSubmissionStatus('submitted');
+    return true;
+  };
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files?.[0];
+    handleFileValidation(selectedFile);
+  };
+
+  const statusLabel = submissionStatus === 'submitted' ? 'Submitted' : 'Pending';
+  const statusClass = submissionStatus === 'submitted' ? 'status-pill--success' : 'status-pill--neutral';
+
+  const timestamp = submissionStatus === 'submitted' && file
+    ? new Date().toLocaleString('en-AU', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: 'Australia/Brisbane',
+      })
+    : '';
+
+  return (
+    <main className="portal-layout">
+      <div className="portal-breadcrumb">
+        <span>Student Portal</span>
+        <span className="breadcrumb__divider">›</span>
+        <span>IFN636</span>
+        <span className="breadcrumb__divider">›</span>
+        <span>Assessment 1</span>
+      </div>
+
+      <h1 className="page-title">Assessment Submission</h1>
+      <p className="page-subtitle">
+        IFN636 • Advanced Requirements Engineering • Semester 2, 2026
+      </p>
+
+      <div className="portal-grid">
+        <section className="card assignment-card">
+          <div className="assignment-card__header">
+            <span className="assignment-card__tag">Assessment 1 • IFN636</span>
+            <h2>{assignment.title}</h2>
+          </div>
+
+          <div className="info-grid">
+            <div className="info-grid__item">
+              <span className="label">Due Date</span>
+              <strong>{assignment.dueDate}</strong>
+            </div>
+            <div className="info-grid__item">
+              <span className="label">Weighting</span>
+              <strong>{assignment.weighting}</strong>
+            </div>
+            <div className="info-grid__item">
+              <span className="label">Status</span>
+              <span className={`status-pill ${statusClass}`}>
+                <span className="status-dot" aria-hidden="true"></span>
+                {statusLabel}
+              </span>
+            </div>
+          </div>
+
+          <p className="assignment-description">{assignment.description}</p>
+          <span className="link-text">Assessment rubric provided in class materials</span>
+        </section>
+
+        <section className="card submit-card">
+          <h3>Submit Assignment</h3>
+          <p className="tiny-copy">Upload your completed PDF report below.</p>
+
+          {error && (
+            <div className="validation-banner" role="alert">
+              <span className="validation-banner__icon" aria-hidden="true">✓</span>
+              <span>{error}</span>
+            </div>
+          )}
+
+          {submissionStatus === 'submitted' ? (
+            <div className="success-card">
+              <div className="success-card__icon" aria-hidden="true">
+                ✓
+              </div>
+              <h4>Submission Successful (Simulated)</h4>
+              <p>Your file has been received. Keep this confirmation for your records.</p>
+
+              <div className="success-card__details">
+                <div className="detail-row">
+                  <span>File</span>
+                  <strong>{file?.name}</strong>
+                </div>
+                <div className="detail-row">
+                  <span>Size</span>
+                  <strong>{file ? `${(file.size / (1024 * 1024)).toFixed(1)} MB` : '0 MB'}</strong>
+                </div>
+                <div className="detail-row">
+                  <span>Timestamp</span>
+                  <strong>{timestamp}</strong>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <label
+                className={`dropzone ${error ? 'dropzone--invalid' : ''}`}
+                htmlFor="assignment-upload"
+              >
+                <input
+                  id="assignment-upload"
+                  type="file"
+                  accept=".pdf,application/pdf"
+                  onChange={handleFileChange}
+                />
+                <div className="dropzone__content">
+                  <span className="dropzone__icon" aria-hidden="true">
+                    ⤴
+                  </span>
+                  <span className="dropzone__message">
+                    Drag and drop your PDF here
+                    <br />
+                    or browse to select a file
+                  </span>
+                </div>
+              </label>
+
+            </>
+          )}
+
+          {submissionStatus === 'submitted' && (
+            <div className="locked-message">
+              <span className="locked-message__icon">✓</span>
+              Submission Received
+            </div>
+          )}
+
+          <p className="bottom-note">
+            This is a simulated prototype. No files are transmitted or stored. Validation runs locally in your browser only.
+          </p>
+        </section>
+      </div>
+
+    </main>
+  );
+}
+
+export default StudentPortal;

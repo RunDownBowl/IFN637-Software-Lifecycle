@@ -60,9 +60,7 @@ function RoleSelection({ onSelectRole }) {
               </button>
             </article>
 
-            <div className="role-card-divider" aria-hidden="true">
-              OR
-            </div>
+            <div className="role-card-divider" aria-hidden="true" />
 
             <article className="role-card role-card--lecturer">
               <div className="role-card__icon role-card__icon--lecturer" aria-hidden="true">

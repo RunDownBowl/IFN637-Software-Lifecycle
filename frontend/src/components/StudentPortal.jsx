@@ -10,22 +10,28 @@ function StudentPortal() {
 
   const handleFileValidation = (selectedFile) => {
     if (!selectedFile) {
-      return;
+      setError('No file selected. Please choose a PDF file under 10 MB (10 * 1024 * 1024 bytes).');
+      setFile(null);
+      setSubmissionStatus('pending');
+      return false;
     }
 
     const fileName = selectedFile.name || 'Selected file';
-    const isPdf = fileName.toLowerCase().endsWith('.pdf');
+    const fileType = (selectedFile.type || '').toLowerCase();
+    const hasPdfExtension = fileName.toLowerCase().endsWith('.pdf');
+    const hasPdfMimeType = fileType === 'application/pdf' || fileType === 'application/x-pdf' || fileType === '';
+    const isPdf = hasPdfExtension && hasPdfMimeType;
     const isUnderLimit = selectedFile.size <= MAX_FILE_SIZE;
 
     if (!isPdf || !isUnderLimit) {
       const issues = [];
 
-      if (!isPdf) {
-        issues.push('Only .pdf files are accepted.');
+      if (!hasPdfExtension || !hasPdfMimeType) {
+        issues.push('Only PDF files with a .pdf extension and application/pdf MIME type are accepted.');
       }
 
       if (!isUnderLimit) {
-        issues.push('File must be under 10 MB.');
+        issues.push('File must be under 10 MB (10 * 1024 * 1024 bytes).');
       }
 
       setError(`Selected file "${fileName}" is invalid. ${issues.join(' ')}`);

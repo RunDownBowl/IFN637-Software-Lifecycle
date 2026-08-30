@@ -1,25 +1,31 @@
 import { useState } from 'react';
+import { ROLES } from './constants';
 import Navbar from './components/Navbar';
+import RoleSelection from './components/RoleSelection';
 import StudentPortal from './components/StudentPortal';
 import LecturerPortal from './components/LecturerPortal';
 
 function App() {
-  const [role, setRole] = useState('student');
+  const [role, setRole] = useState(null);
 
-  const handleRoleToggle = () => {
-    setRole((currentRole) => (currentRole === 'student' ? 'lecturer' : 'student'));
+  if (role === null) {
+    return <RoleSelection onSelectRole={setRole} />;
+  }
+
+  const handleResetRole = () => {
+    setRole(null);
   };
 
   return (
     <div className="app-shell">
-      <Navbar role={role} onToggleRole={handleRoleToggle} />
+      <Navbar role={role} onChangeRole={handleResetRole} />
       <div className="content-area">
-        {role === 'student' ? <StudentPortal /> : <LecturerPortal />}
+        {role === ROLES.STUDENT ? <StudentPortal /> : <LecturerPortal />}
       </div>
 
       <footer className="portal-footer" aria-label="Current portal footer">
         <span className="portal-footer__item">
-          {role === 'student' ? 'Student Portal' : 'Learning & Teaching'}
+          {role === ROLES.STUDENT ? 'Student Portal' : 'Learning & Teaching'}
         </span>
       </footer>
     </div>

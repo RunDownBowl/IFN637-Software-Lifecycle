@@ -1,5 +1,7 @@
-function Navbar({ role, onToggleRole }) {
-  const isStudent = role === 'student';
+import { ROLES } from '../constants';
+
+function Navbar({ role, onChangeRole }) {
+  const isStudent = role === ROLES.STUDENT;
 
   return (
     <header className="navbar">
@@ -19,8 +21,8 @@ function Navbar({ role, onToggleRole }) {
           <span>Assessment 1</span>
         </div>
 
-        <button className="navbar__toggle" type="button" onClick={onToggleRole}>
-          {isStudent ? 'Switch to Lecturer' : 'Switch to Student'}
+        <button className="navbar__toggle" type="button" onClick={onChangeRole}>
+          Change Role
         </button>
       </div>
     </header>

@@ -10,7 +10,7 @@ function StudentPortal() {
 
   const handleFileValidation = (selectedFile) => {
     if (!selectedFile) {
-      setError('No file selected. Please choose a PDF file under 10 MB (10 * 1024 * 1024 bytes).');
+      setError('No file selected. Please choose a PDF file under 10 MB.');
       setFile(null);
       setSubmissionStatus('pending');
       return false;
@@ -31,7 +31,7 @@ function StudentPortal() {
       }
 
       if (!isUnderLimit) {
-        issues.push('File must be under 10 MB (10 * 1024 * 1024 bytes).');
+        issues.push('File must be under 10 MB.');
       }
 
       setError(`Selected file "${fileName}" is invalid. ${issues.join(' ')}`);
@@ -42,13 +42,21 @@ function StudentPortal() {
 
     setError('');
     setFile(selectedFile);
-    setSubmissionStatus('submitted');
+    setSubmissionStatus('pending');
     return true;
   };
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files?.[0];
     handleFileValidation(selectedFile);
+  };
+
+  const handleSubmit = () => {
+    if (!file) {
+      return;
+    }
+
+    setSubmissionStatus('submitted');
   };
 
   const statusLabel = submissionStatus === 'submitted' ? 'Submitted' : 'Pending';
@@ -120,61 +128,49 @@ function StudentPortal() {
             </div>
           )}
 
-          {submissionStatus === 'submitted' ? (
-            <div className="success-card">
-              <div className="success-card__icon" aria-hidden="true">
-                ✓
-              </div>
-              <h4>Submission Successful (Simulated)</h4>
-              <p>Your file has been received. Keep this confirmation for your records.</p>
-
-              <div className="success-card__details">
-                <div className="detail-row">
-                  <span>File</span>
-                  <strong>{file?.name}</strong>
-                </div>
-                <div className="detail-row">
-                  <span>Size</span>
-                  <strong>{file ? `${(file.size / (1024 * 1024)).toFixed(1)} MB` : '0 MB'}</strong>
-                </div>
-                <div className="detail-row">
-                  <span>Timestamp</span>
-                  <strong>{timestamp}</strong>
-                </div>
-              </div>
+          {!error && file && submissionStatus !== 'submitted' && (
+            <div className="success-banner" role="status">
+              <span className="success-banner__icon" aria-hidden="true">✓</span>
+              <span>File ready to submit: {file.name}</span>
             </div>
-          ) : (
-            <>
-              <label
-                className={`dropzone ${error ? 'dropzone--invalid' : ''}`}
-                htmlFor="assignment-upload"
-              >
-                <input
-                  id="assignment-upload"
-                  type="file"
-                  accept=".pdf,application/pdf"
-                  onChange={handleFileChange}
-                />
-                <div className="dropzone__content">
-                  <span className="dropzone__icon" aria-hidden="true">
-                    ⤴
-                  </span>
-                  <span className="dropzone__message">
-                    Drag and drop your PDF here
-                    <br />
-                    or browse to select a file
-                  </span>
-                </div>
-              </label>
-
-            </>
           )}
 
-          {submissionStatus === 'submitted' && (
+          <label
+            className={`dropzone ${error ? 'dropzone--invalid' : ''}`}
+            htmlFor="assignment-upload"
+          >
+            <input
+              id="assignment-upload"
+              type="file"
+              accept=".pdf,application/pdf"
+              onChange={handleFileChange}
+            />
+            <div className="dropzone__content">
+              <span className="dropzone__icon" aria-hidden="true">
+                ⤴
+              </span>
+              <span className="dropzone__message">
+                Drag and drop your PDF here
+                <br />
+                or browse to select a file
+              </span>
+            </div>
+          </label>
+
+          {submissionStatus === 'submitted' ? (
             <div className="locked-message">
               <span className="locked-message__icon">✓</span>
               Submission Received
             </div>
+          ) : (
+            <button
+              type="button"
+              className="primary-button"
+              disabled={!file}
+              onClick={handleSubmit}
+            >
+              Submit Assignment
+            </button>
           )}
 
           <p className="bottom-note">

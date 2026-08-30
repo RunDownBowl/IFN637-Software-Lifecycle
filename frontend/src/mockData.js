@@ -18,8 +18,25 @@ export const assignment = {
     'Conduct a thorough requirements analysis for a proposed university course management system. Your report must include stakeholder identification, functional and non-functional requirements, use case diagrams, and a requirements traceability matrix.',
 };
 
+export const assessments = [
+  {
+    id: 'A1',
+    label: 'Assessment 1 - Requirements Analysis (Active)',
+    windowOpen: true,
+  },
+  {
+    id: 'A2',
+    label: 'Assessment 2 - Final Project (Not Started)',
+    windowOpen: false,
+  },
+];
+
+export const enrolledCount = 48;
+
 export const submissions = [
   {
+    id: 'S-1001',
+    assessmentId: 'A1',
     studentId: 'n12345678',
     studentName: 'Alexandra Petrov',
     fileName: 'n12345678_IFN636_A1_Report.pdf',
@@ -28,6 +45,8 @@ export const submissions = [
     status: 'Submitted',
   },
   {
+    id: 'S-1002',
+    assessmentId: 'A1',
     studentId: 'n98723401',
     studentName: 'James Okonkwo',
     fileName: 'n98723401_IFN636_Assignment1_Final.pdf',
@@ -36,6 +55,8 @@ export const submissions = [
     status: 'Submitted',
   },
   {
+    id: 'S-1003',
+    assessmentId: 'A1',
     studentId: 'n44512786',
     studentName: 'Mei-Lin Huang',
     fileName: 'n44512786_IFN636_A1.pdf',
@@ -44,6 +65,8 @@ export const submissions = [
     status: 'Submitted',
   },
   {
+    id: 'S-1004',
+    assessmentId: 'A1',
     studentId: 'n67892384',
     studentName: 'Carlos Mendes',
     fileName: 'n67892384_report_IFN636.pdf',
@@ -52,6 +75,8 @@ export const submissions = [
     status: 'Submitted',
   },
   {
+    id: 'S-1005',
+    assessmentId: 'A1',
     studentId: 'n38198456',
     studentName: 'Priya Nair',
     fileName: 'n38198456_IFN636_Submission.pdf',
@@ -61,7 +86,4 @@ export const submissions = [
   },
 ];
 
-export const assessmentOptions = [
-  'Assessment 1 - Knowledge Check (Active)',
-  'Assessment 2 - Final Project (Not Started)',
-];
+export const assessmentOptions = assessments.map((assessment) => assessment.label);

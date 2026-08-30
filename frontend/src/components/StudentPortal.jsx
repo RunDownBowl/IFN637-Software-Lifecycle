@@ -128,6 +128,13 @@ function StudentPortal() {
             </div>
           )}
 
+          {!error && file && submissionStatus !== 'submitted' && (
+            <div className="success-banner" role="status">
+              <span className="success-banner__icon" aria-hidden="true">✓</span>
+              <span>File ready to submit: {file.name}</span>
+            </div>
+          )}
+
           <label
             className={`dropzone ${error ? 'dropzone--invalid' : ''}`}
             htmlFor="assignment-upload"

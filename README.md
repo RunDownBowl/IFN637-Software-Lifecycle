@@ -28,6 +28,7 @@ The project is built with React and Vite and uses modular functional components 
 - Submission success is simulated in the browser only
 - All user and assignment data is mock data, not live institutional data
 - No authentication or authorisation flow is implemented
+- Lecturer pagination controls are visual-only, and filtered table results do not update the displayed total-record count.
 
 ## Deployment
 

@@ -1,5 +1,7 @@
+import { ROLES } from '../constants';
+
 function Navbar({ role, onChangeRole }) {
-  const isStudent = role === 'student';
+  const isStudent = role === ROLES.STUDENT;
 
   return (
     <header className="navbar">

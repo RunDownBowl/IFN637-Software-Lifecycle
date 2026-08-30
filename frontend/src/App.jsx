@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ROLES } from './constants';
 import Navbar from './components/Navbar';
 import RoleSelection from './components/RoleSelection';
 import StudentPortal from './components/StudentPortal';
@@ -19,12 +20,12 @@ function App() {
     <div className="app-shell">
       <Navbar role={role} onChangeRole={handleResetRole} />
       <div className="content-area">
-        {role === 'student' ? <StudentPortal /> : <LecturerPortal />}
+        {role === ROLES.STUDENT ? <StudentPortal /> : <LecturerPortal />}
       </div>
 
       <footer className="portal-footer" aria-label="Current portal footer">
         <span className="portal-footer__item">
-          {role === 'student' ? 'Student Portal' : 'Learning & Teaching'}
+          {role === ROLES.STUDENT ? 'Student Portal' : 'Learning & Teaching'}
         </span>
       </footer>
     </div>

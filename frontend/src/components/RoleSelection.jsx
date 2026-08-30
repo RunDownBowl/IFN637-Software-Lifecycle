@@ -1,3 +1,5 @@
+import { ROLES } from '../constants';
+
 function RoleSelection({ onSelectRole }) {
   const handleSelect = (role) => {
     onSelectRole(role);
@@ -54,7 +56,7 @@ function RoleSelection({ onSelectRole }) {
                 <span>Local Only</span>
               </div>
 
-              <button type="button" className="role-card__action role-card__action--student" onClick={() => handleSelect('student')}>
+              <button type="button" className="role-card__action role-card__action--student" onClick={() => handleSelect(ROLES.STUDENT)}>
                 Enter as Student <span aria-hidden="true">→</span>
               </button>
             </article>
@@ -83,7 +85,7 @@ function RoleSelection({ onSelectRole }) {
                 <span>Simulated</span>
               </div>
 
-              <button type="button" className="role-card__action role-card__action--lecturer" onClick={() => handleSelect('lecturer')}>
+              <button type="button" className="role-card__action role-card__action--lecturer" onClick={() => handleSelect(ROLES.LECTURER)}>
                 Enter as Lecturer <span aria-hidden="true">→</span>
               </button>
             </article>
